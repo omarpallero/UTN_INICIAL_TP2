@@ -11,7 +11,7 @@ const { getALLProducts, getProductsByID, getUsuario, getaddProducts, getnosotros
 
 const productsRoutes = express.Router()
 
-productsRoutes.get("/", (getALLProducts))
+productsRoutes.get("/", getALLProducts)
 
 productsRoutes.get('/tienda', getProductsByID)
 
