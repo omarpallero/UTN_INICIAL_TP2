@@ -14,7 +14,7 @@ const getUsuario = (req, res) => {
         if (error) {
             console.log(error)
         } else {
-            res.send('pages/usuario', {
+            res.render('pages/usuario', {
                 products: data
             })
         }
