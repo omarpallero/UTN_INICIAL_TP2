@@ -6,7 +6,7 @@
 
 
 const express = require('express')
-const { getALLProducts, getProductsByID, getUsuario, getaddProducts, getnosotros, login, contacto} = require('../controllers/productsControllers')
+const { getALLProducts, getProductsByID, getUsuario, addProducts, addNewProduct, getnosotros, login, contacto} = require('../controllers/productsControllers')
 
 
 const productsRoutes = express.Router()
@@ -17,7 +17,9 @@ productsRoutes.get('/tienda', getProductsByID)
 
 productsRoutes.get('/usuario', getUsuario)
 
-productsRoutes.get('/addproducts', getaddProducts)
+productsRoutes.get('/addproducts', addProducts)
+
+productsRoutes.post('/addProduct', addNewProduct)
 
 productsRoutes.get('/nosotros', getnosotros)
 

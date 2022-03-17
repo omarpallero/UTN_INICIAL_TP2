@@ -10,6 +10,9 @@ const app = express()
 //conectarnos a la DB//
 databaseConnection.connect()
 
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 //configuracion
 app.use(express.json());
 app.set("views", path.join(__dirname,"views"));
