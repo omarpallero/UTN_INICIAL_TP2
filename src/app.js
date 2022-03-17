@@ -6,6 +6,10 @@ const path = require ('path')
 const app = express()
 
 
+//permite viajar datos como package json o arrays
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
 
 //conectarnos a la DB//
 databaseConnection.connect()

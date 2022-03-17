@@ -39,7 +39,19 @@ const contacto =(req, res)=>{
     res.render('pages/contacto')
 }
 
+const addProduct = (req, res) => {
+    const { name, category, price , description, stock } = req.body
+    console.log(name);
+    databaseConnection.query("INSERT INTO products (name,category,price,description,stock) VALUES (?,?,?,?,?)", [name, category, parseFloat(price), description, parseInt(stock)], (error, data) => {
+        if (error) {
+            console.log(error)
+        } else {
+            res.render("pages/tienda")
+            console.log("Se dió de alta :  ( Name: " + name + "  " +  "Categoria:" +category+" "+ "Price: " + price + "  " + "Descripcion: " + description + " " + "Stock:" + stock+" a la DB")
 
+        }
+        
+    })
+}
 
-
-module.exports = {getALLProducts, getProductsByID,getUsuario,getaddProducts,getnosotros,login,contacto}
+module.exports = {getALLProducts, getProductsByID,getUsuario,getaddProducts,getnosotros,login,contacto, addProduct}

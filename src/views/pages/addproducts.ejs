@@ -5,31 +5,46 @@
 </head>
 <body>
     <%- include('../partials/nav') %>
-    <h2 class="AgregarProductos">Vamos agregar Productos</h2>
+    <h2 class="AgregarProductos">Vamos a agregar Productos</h2>
     <main style="width: 1000px;margin-left: 20px;">
-        <form method="POST" action="/products/addproduct">
-        <div class="mb-3">
-            <label for="name" class="form-label">nombre</label>
-            <input type="text" class="form-control" id="name" name="name">
-        </div>
-        <div class="mb-3">
-            <label for="category" class="form-label">Categoria</label>
-            <input type="text" class="form-control" id="category" name="category">
-        </div>
-        <div class="mb-3">
-            <label for="price" class="form-label">Precio</label>
-            <input type="text" class="form-control" id="price" name="price">
-        </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Descripcion</label>
-            <input type="text" class="form-control" id="description" name="description">
-        </div>
-        <div class="mb-3">
-            <label for="stock" class="form-label">Stock</label>
-            <input type="text" class="form-control" id="stock" name="stock">
-        </div>
-        <button type="submit" class="btn btn-primary">Agregar Producto</button>
-      </form>
+
+        <form class="Contacto" method="POST" action="/products/addproduct">
+
+            <div class="mb-3"> 
+                <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese nombre del producto aquí."
+                name="name">
+            </div>
+
+
+            <div class="mb-3"> 
+                <label for="exampleFormControlInput1" class="form-label">Categoria:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escriba categoria aquí"
+                name="category">
+            </div>
+            
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Precio:</label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese precio aquí"
+                name="price">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Descripción:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese descripción aquí"
+                name="description">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Stock:</label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese stock aquí"
+                name="stock">
+            </div>
+            
+            
+            <button type="submit" class="btn btn-primary" id="redbuton">Enviar mensaje</button>
+            
+        </form>
+    
+    </div>
 
     </main>
     
