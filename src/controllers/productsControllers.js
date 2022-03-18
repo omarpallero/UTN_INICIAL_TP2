@@ -27,6 +27,7 @@ const getUsuario = (req, res) => {
 
     //res.send(name + " " + category + " " + price + " " + description + " " + stock)
 const addNewProduct = (req, res) => {
+    const { name, category, price, description, stock } = req.body
     databaseConnection.query("INSERT INTO products (name,category,price,description,stock)VALUES(?,?,?,?,?) ", 
     [name, category,parseFloat(price), description,parseInt(stock)],
         (error, data) => {
